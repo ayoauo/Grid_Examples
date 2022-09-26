@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrapper {
+            display: grid;
+            /* grid-template-columns: 2fr 2fr 1fr; устанавливать ручками сколько будут занимать блоки */
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1em;
+            /* grid-auto-rows: 150px; все блоки одной высоты */
+            grid-auto-rows: minmax(100px auto); 
+            /* минимальная высота блока и максимальная */
+        }
+
+        .included {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1em;
+            grid-auto-rows: 80px;
+        }
+
+        .wrapper>div {
+            padding: 1em;
+            background-color: rgb(63, 162, 173);
+        }
+
+        .wrapper>div.light {
+            padding: 1em;
+            background-color: rgb(167, 208, 203);
+        }
+
+        .included > div {
+            background-color: rgb(228, 230, 99);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid harum itaque at cumque in veniam maxime
+            corrupti atque odio fugit! Error similique nisi corrupti veniam cum. Dolore recusandae quaerat nam
+            laboriosam maxime hic illum, ratione exercitationem voluptatum soluta! Iure totam amet dicta tenetur,
+            tempore repellat magnam blanditiis repudiandae provident odit, illo laboriosam voluptas ipsam excepturi!
+        </div>
+        <div class="light">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <div class="light">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </div>
+        <div>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        </div>
+        <div class="light">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </div>
+        <div>
+            <div class="included">
+                <div>Lorem, ipsum.</div>
+                <div>Lorem, ipsum.</div>
+                <div>Lorem, ipsum.</div>
+                <div>Lorem, ipsum.</div>
+            </div>
+        </div>
+        <div class="light">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        </div>
+    </div>
+
+</body>
+
+</html>
